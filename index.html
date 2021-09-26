@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task</title>
+</head>
+<body>
+    <div class="container">
+        <h5>Add Employee</h5>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" > <br><br>
+
+            <label for="gender">Gender:</label>
+            <label for="gender">Male:</label>
+            <input type="radio" name="gender" id="gender" value="Male">
+            <label for="gender" >Female:</label>
+            <input type="radio" name="gender"  id="gender" value="Female"> <br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" placeholder="mm/dd/yy"><br><br>
+
+            <label for="mail">Email:</label>
+            <input type="email" id="mail"> <br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" > <br><br>
+
+            <label for="hobbies">Hobbies:</label><br>
+            <!-- <input type="checkbox" id="hobbies"> -->
+
+            <input type="checkbox" value="Cricket" id="hobbies1">
+            <label for="hobbies1">Cricket</label><br>
+            <input type="checkbox" value="Chess" id="hobbies2">
+            <label for="hobbies2">Chess</label><br>
+            <input type="checkbox" value="Music" id="hobbies3">
+            <label for="hobbies3">Music</label> <br> <br>   
+
+            <input type="button" name="submit" id="submit" onclick="onClick()" value="Submit">
+            <!-- <button id="submit" onclick="onSubmit">Submit</button> -->
+            
+        </form>
+    </div>
+    <div id="test"></div>
+    <div id="table">
+        <table id='tab'>
+            <tr id='heading'>
+                <td>Name</td>
+                <td>Gender</td>
+                <td>Date Of Birth</td>
+                <td>email</td>
+                <td>phone</td>
+                <td>Hobbies</td>
+            </tr>
+            <tbody id="body">
+               <td id='td1'></td>
+               <td id='td2'></td>
+               <td id='td3'></td>
+               <td id='td4'></td>
+               <td id='td5'></td>
+               <td id='td6'></td>
+            </tbody>
+
+        </table>
+    </div>
+</body>
+    <script>
+        const onClick = () => {
+            
+            let name = document.getElementById('name').value;
+            let gender = document.getElementById('gender').value;
+            let dob = document.getElementById('dob').value.toString();
+            let email = document.getElementById('mail').value;
+            let phone = document.getElementById('phone').value;
+            let hobbies1 = document.getElementById('hobbies1').value;
+            let hobbies2 = document.getElementById('hobbies2').value;
+            let hobbies3 = document.getElementById('hobbies3').value;
+           
+            document.getElementById('td1').innerHTML = name;
+            document.getElementById('td2').innerHTML = gender;
+            document.getElementById('td3').innerHTML = dob;
+            document.getElementById('td4').innerHTML = email;
+            document.getElementById('td5').innerHTML = phone;
+            document.getElementById('td6').innerHTML = hobbies1;
+            
+            // document.getElementById('td6').innerHTML = name;
+        }
+
+    </script>
+
+</html>
+
+<!-- let persons = [name, gender, dob, email, phone];
+let tr = document.createElement('tr');
+let td = document.createElement('td');
+let body = document.getElementById('body');
+ persons.forEach((person)=>{      
+    // console.log(person)
+   body.appendChild(`<td>${person}</td>
+
+   `);
+}) -->

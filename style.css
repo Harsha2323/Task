@@ -1,0 +1,38 @@
+.container {
+  padding: 10;
+  margin: auto;
+  max-width: 960px;
+  padding-top: 30px;
+  border: 1px solid grey;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#table td {
+  background-color: grey;
+  margin: 50px;
+  padding: 50px;
+}
+
+#table thead {
+  margin: 50px;
+  padding: 50px;
+}
+
+h5 {
+  background-color: blue;
+  color: white;
+  font-size: larger;
+  padding: 10px;
+}
+#submit {
+  background-color: blue;
+  color: white;
+  font-size: large;
+  border: none;
+  padding: 10px;
+}
+
+#submit:hover {
+  background-color: tomato;
+}
